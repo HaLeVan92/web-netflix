@@ -11,8 +11,8 @@ function Footer() {
                       <img src="https://duy-movie-app.netlify.app/static/media/netflixlogo.ce3078b4cc1d1d95414a.png"  alt="Netflix Logo" className="navLogo" />
                     
             </div>
-            <div className='footer-content-menus'>
             <Box sx={{ display: {xs: 'none', sm:'none' ,md: 'flex', lg: 'flex', xl: 'flex'}, gap: 1}}>
+            <div className='footer-content-menus'>
                 <div className='footer-menu'>
                     <a className='textMenu' href='/'>Home</a>
                     <a className='textMenu' href='/'>Contact us</a>
@@ -30,8 +30,8 @@ function Footer() {
                     <a className='textMenu' href='/'>Recent release</a>
                     <a className='textMenu' href='/'>Top IMDB</a>                    
                 </div>
-                </Box>
             </div>
+                </Box>
         </div>
         <div className='footer-signature'>
             <p>@2024 Made in ❤ by Ha Le</p>

@@ -103,7 +103,7 @@ body {
   }
   
 .videoIntro {
-    position: absolute;
+    /* position: absolute; */
     top: 0px;
     left: 0px;
     z-index: 2;
@@ -265,11 +265,11 @@ body {
 .footer-content-menus {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-
+  
 }
 
 .footer-menu {
@@ -281,6 +281,8 @@ body {
   font-size: 35px;
   color: #fff;
   font-weight: 300;
+  padding-right: 30px;
+  
 }
 .textMenu:active {
   color: blue;

@@ -7,7 +7,7 @@ const Main = () => {
   return(
     <div className="homeBanner">
 
-      <video class="videoIntro" controls autoplay='autoplay' loop='true' muted='isMute'>
+      <video class="videoIntro" controls={false} autoplay='autoplay' loop={true} muted={isMute}>
           <source src="https://res.cloudinary.com/dadolad8q/video/upload/v1720084663/ATLAS_-_Official_Trailer_-_Netflix_kqojyr.mp4"  type="video/mp4"/>        
       </video>
 

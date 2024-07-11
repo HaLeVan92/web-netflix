@@ -55,8 +55,8 @@ export default function SearchMovies() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate(`/search`);
-    setSearchParams({ search: event.target[0].value });
+    navigate(`/search/${event.target[0].value}`);
+    // setSearchParams({ search: event.target[0].value });
   }
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: 'white', borderRadius: 2 }}>
