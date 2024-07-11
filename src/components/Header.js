@@ -2,6 +2,8 @@ import React from 'react'
 import Button from '@mui/material/Button';
 import SearchMovies from '../pages/SearchMovies';
 import { Box } from '@mui/material';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
 const Header = () => {
@@ -29,17 +31,14 @@ const Header = () => {
                             <a className="genres" href="/">Upcoming</a>
                         </div>
                     </Box>  
+                        
 
-                        <Button variant="contained">Sign in</Button>
-
+                        <div className='signin'>
+                        <FavoriteIcon sx={{backgroundColor: ' red', display: {xs: 'flex',sm:'flex' ,md: 'flex', lg: 'flex', xl: 'flex'} }}/>
+                        <Button variant="contained" sx= {{display: {xs: 'none',sm:'flex' ,md: 'flex', lg: 'flex', xl: 'flex'}}}>Sign in</Button>
+                        </div>   
                       
-                        {/* <from className="dFlex" role="search">
-                            <select>
-                                <option> English </option>
-                                <option> VietNam </option>
-                            </select>
-                            <Button variant="contained">Sign in</Button>
-                        </from> */}
+
                     </div>
                 </div>
             </nav>
