@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams, useSearchParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import apiService from "../app/apiService";
 import { API_KEY } from "../app/config";
 import Carousel from "react-multi-carousel";
@@ -26,10 +26,6 @@ const responsive = {
 };
 
 function SearchPage() {
-  let [searchParams, setSearchParams] = useSearchParams();
-
-  const query = searchParams.get("search");
-
   const [movie, setMovie] = useState();
 
   const navigate = useNavigate();

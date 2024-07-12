@@ -1,47 +1,47 @@
-import * as React from 'react';
-import { styled, alpha } from '@mui/material/styles';
-import Box from '@mui/material/Box';
-import InputBase from '@mui/material/InputBase'
-import SearchIcon from '@mui/icons-material/Search';
-import { useNavigate, useSearchParams } from "react-router-dom";
+import * as React from "react";
+import { styled, alpha } from "@mui/material/styles";
+import Box from "@mui/material/Box";
+import InputBase from "@mui/material/InputBase";
+import SearchIcon from "@mui/icons-material/Search";
+import { useNavigate } from "react-router-dom";
 
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
+const Search = styled("div")(({ theme }) => ({
+  position: "relative",
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
+  "&:hover": {
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
+  width: "100%",
+  [theme.breakpoints.up("sm")]: {
     marginLeft: theme.spacing(1),
-    width: 'auto',
+    width: "auto",
   },
 }));
 
-const SearchIconWrapper = styled('div')(({ theme }) => ({
+const SearchIconWrapper = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
+  height: "100%",
+  position: "absolute",
+  pointerEvents: "none",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
 }));
 
 const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  width: '100%',
-  '& .MuiInputBase-input': {
+  color: "inherit",
+  width: "100%",
+  "& .MuiInputBase-input": {
     padding: theme.spacing(1, 1, 1, 0),
     // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
+    transition: theme.transitions.create("width"),
+    [theme.breakpoints.up("sm")]: {
+      width: "12ch",
+      "&:focus": {
+        width: "20ch",
       },
     },
   },
@@ -49,8 +49,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function SearchMovies() {
   // eslint-disable-next-line
-  let [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get('search');
+
   const navigate = useNavigate();
 
   function handleSubmit(event) {
@@ -59,21 +58,18 @@ export default function SearchMovies() {
     // setSearchParams({ search: event.target[0].value });
   }
   return (
-    <Box sx={{ flexGrow: 1, backgroundColor: 'white', borderRadius: 2 }}>
-   
- 
-          <Search sx={{minWidth : 120}}>
-            <form onSubmit={handleSubmit}>
-              <SearchIconWrapper>
-                <SearchIcon />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="Search…"
-                inputProps={{ 'aria-label': 'search' }}
-              />
-            </form>
-          </Search>
-
+    <Box sx={{ flexGrow: 1, backgroundColor: "white", borderRadius: 2 }}>
+      <Search sx={{ minWidth: 120 }}>
+        <form onSubmit={handleSubmit}>
+          <SearchIconWrapper>
+            <SearchIcon />
+          </SearchIconWrapper>
+          <StyledInputBase
+            placeholder="Search…"
+            inputProps={{ "aria-label": "search" }}
+          />
+        </form>
+      </Search>
     </Box>
   );
 }

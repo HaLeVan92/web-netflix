@@ -1,9 +1,8 @@
 import React from "react";
-import Button from "@mui/material/Button";
+
 import SearchMovies from "../pages/SearchMovies";
 import { Box } from "@mui/material";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const Header = () => {
   return (
@@ -63,7 +62,6 @@ const Header = () => {
                   },
                 }}
               />
-              {/* <Button variant="contained" sx= {{display: {xs: 'none',sm:'flex' ,md: 'flex', lg: 'flex', xl: 'flex'}}}>Sign in</Button> */}
             </div>
           </div>
         </div>
